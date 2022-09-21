@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+</head>
+<body>
+    {% if request.user.is_staff %}
+    <a href="{% url 'home' %}">admin home</a>
+    {% else %}
+    <a href="{% url 'customeruser' %}">customer home</a>
+    {% endif %}
+    <a href="{% url 'login' %}">login</a>
+    <a href="{% url 'register' %}">register</a>
+    <a href="{% url 'logout' %}">logout</a>
+    <div>hello user , {{request.user}}</div>
+
+</body>
+</html>

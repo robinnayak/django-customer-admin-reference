@@ -1,0 +1,12 @@
+{% extends 'account/main.html' %}
+{% load static %}
+
+{% block content %}
+<div>customer user view </div>
+
+<div>name: {{customer.name}}</div>
+<div>email: {{customer.email}}</div>
+<div>phone: {{customer.phone}}</div>
+<a href="#">update</a>
+<a href="#">delete</a>
+{% endblock %}
